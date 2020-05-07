@@ -62,8 +62,23 @@ const entryPoint = document.querySelector(".entry")
 //   <img src={imageURL} class="dog-image">
 //   <h3>Breed: {breed}</h3>
 // </div>
-function dogCardMaker(/* what here? */) {
-  // implement!
+function dogCardMaker(attrs/* what here? */) {
+  const { imageUrl, breed } = attrs
+
+  const dogCard = document.createElement('div')
+  const img = document.createElement('img')
+  const h3 = document.createElement('h3')
+
+  dogCard.appendChild(img)
+  dogCard.appendChild(h3)
+
+  dogCard.classList.add('dog-card')
+  img.classList.add('dog-image')
+
+  h3.textContent = `Breed: ${breed}`
+  img.src = imageUrl
+
+  return dogCard
 }
 
 
