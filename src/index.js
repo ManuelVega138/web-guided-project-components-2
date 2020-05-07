@@ -119,7 +119,11 @@ axios.get(`https://dog.ceo/api/breed/doberman/images/random/3`)
 
 // 👉 TASK 5- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
-
+function fetchDoggies(breed, number) {
+  // do the deed!!!
+  // now the breed and the number shouldn't be hard-coded
+  // bug come from args instead!
+}
 
 // 👉 TASK 6- Put a button in index.html to 'get dogs' and add a click
 // event listener that executes `getDogs`
