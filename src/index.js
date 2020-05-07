@@ -98,7 +98,8 @@ axios.get(`https://dog.ceo/api/breed/doberman/images/random/3`)
     const doggyImagesArr = response.data.message
     console.log(doggyImagesArr)
     doggyImagesArr.forEach(doggyImageURL => {
-      // ?
+      const dogCard = dogCardMaker({ imageUrl: doggyImageURL, breed: 'doberman' })
+      entryPoint.appendChild(dogCard)
     })
   })
   .catch(error => {
