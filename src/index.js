@@ -94,7 +94,7 @@ function dogCardMaker(attrs/* what here? */) {
 //    (instructor will demo fetching a random dog from `https://dog.ceo/api/breeds/image/random`)
 
 
-// 👉 TASK 5- Wrap the fetching operation inside a function `getDogs`
+// 👉 TASK 5- Wrap the fetching operation inside a function `fetchDog`
 // that takes a breed and a count (of dogs)
 function fetchDog(breed, number) {
   axios.get(`https://dog.ceo/api/breed/${breed}/images/random/${number}`)
@@ -116,7 +116,7 @@ fetchDog('african', 3)
 
 
 // 👉 TASK 6- Put a button in index.html to 'get dogs' and add a click
-// event listener that executes `getDogs`
+// event listener that executes `fetchDog`
 
 
 // 👉 TASK 7- Loop over the breeds array, fetching a dog at each iteration
