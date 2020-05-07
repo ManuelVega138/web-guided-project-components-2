@@ -93,6 +93,14 @@ function dogCardMaker(attrs/* what here? */) {
 //    * IN ANY CASE: log "done" to the console
 //    (instructor will demo fetching a random dog from `https://dog.ceo/api/breeds/image/random`)
 
+axios.get(`https://dog.ceo/api/breed/doberman/images/random/3`)
+  .then(response => {
+    debugger
+  })
+  .catch(error => {
+    debugger
+  })
+
 // axios.get(`https://dog.ceo/api/breeds/image/random`)
 //   .then(data => {
 //     // do stuff like use the doggy data to make doggy cards and then append them to the DOM
