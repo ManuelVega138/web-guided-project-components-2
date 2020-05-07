@@ -111,12 +111,12 @@ function fetchDog(breed, number) {
       console.log('done')
     })
 }
-fetchDog('doberman', 3)
-fetchDog('african', 3)
 
 
 // 👉 TASK 6- Put a button in index.html to 'get dogs' and add a click
 // event listener that executes `fetchDog`
-
+document.querySelector('button').addEventListener(() => {
+  fetchDog('doberman', 5)
+})
 
 // 👉 TASK 7- Loop over the breeds array, fetching a dog at each iteration
