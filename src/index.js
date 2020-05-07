@@ -95,7 +95,11 @@ function dogCardMaker(attrs/* what here? */) {
 
 axios.get(`https://dog.ceo/api/breed/doberman/images/random/3`)
   .then(response => {
-    debugger
+    const doggyImagesArr = response.data.message
+    console.log(doggyImagesArr)
+    doggyImagesArr.forEach(doggyImageURL => {
+      // ?
+    })
   })
   .catch(error => {
     debugger
