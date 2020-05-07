@@ -92,7 +92,16 @@ function dogCardMaker(attrs/* what here? */) {
 //    * ON FAILURE: log the error to the console
 //    * IN ANY CASE: log "done" to the console
 //    (instructor will demo fetching a random dog from `https://dog.ceo/api/breeds/image/random`)
-
+// axios.get(`https://dog.ceo/api/breeds/image/random`)
+//   .then(data => {
+//     // do stuff like use the doggy data to make doggy cards and then append them to the DOM
+//   })
+//   .catch(error => {
+//     // handle error
+//   })
+//   .finally(() => {
+//     console.log('done')
+//   })
 
 // 👉 TASK 5- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
