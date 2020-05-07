@@ -31,17 +31,17 @@ function onlyLikeEvenNumbers(number) {
 // axios.get('URL') // returns a promise
 onlyLikeEvenNumbers(5)
   .then(data => {
-    console.log(data)
     // HAPPY PATH
     // do stuff with data
+    console.log(data)
   })
   .catch(error => {
-    console.log(error)
     // SAD PATH
     // handle the sad situation somehow
+    console.log(error)
   })
   .finally(() => {
-    // RUNS REGARDLESS
+    // RUNS REGARDLESS (optional)
     console.log('done, for better or worse')
   })
 
