@@ -45,6 +45,8 @@ onlyLikeEvenNumbers(5)
     console.log('done, for better or worse')
   })
 
+console.log('we just executed a function that returns a promise')
+
 // 👉 TASK 1- Select the "entry point", the element
 // inside of which we'll inject our dog cards 
 const entryPoint = null
