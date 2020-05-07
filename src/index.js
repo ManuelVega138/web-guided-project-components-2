@@ -46,7 +46,7 @@ onlyLikeEvenNumbers(5)
   })
 
 
-console.log('we just executed a function that returns a promise')
+// console.log('we just executed a function that returns a promise')
 
 
 // 👉 TASK 1- Select the "entry point", the element
