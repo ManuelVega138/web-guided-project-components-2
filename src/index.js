@@ -93,37 +93,27 @@ function dogCardMaker(attrs/* what here? */) {
 //    * IN ANY CASE: log "done" to the console
 //    (instructor will demo fetching a random dog from `https://dog.ceo/api/breeds/image/random`)
 
-axios.get(`https://dog.ceo/api/breed/doberman/images/random/3`)
-  .then(response => {
-    const doggyImagesArr = response.data.message
-    console.log(doggyImagesArr)
-    doggyImagesArr.forEach(doggyImageURL => {
-      const dogCard = dogCardMaker({ imageUrl: doggyImageURL, breed: 'doberman' })
-      entryPoint.appendChild(dogCard)
-    })
-  })
-  .catch(error => {
-    debugger
-  })
-
-// axios.get(`https://dog.ceo/api/breeds/image/random`)
-//   .then(data => {
-//     // do stuff like use the doggy data to make doggy cards and then append them to the DOM
-//   })
-//   .catch(error => {
-//     // handle error
-//   })
-//   .finally(() => {
-//     console.log('done')
-//   })
 
 // 👉 TASK 5- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
-function fetchDoggies(breed, number) {
-  // do the deed!!!
-  // now the breed and the number shouldn't be hard-coded
-  // bug come from args instead!
+function fetchDog(breed, number) {
+  axios.get(`https://dog.ceo/api/breed/${breed}/images/random/${number}`)
+    .then(response => {
+      response.data.message.forEach(imageUrl => {
+        const dog = dogCardMaker({ imageUrl: imageUrl, breed: breed })
+        entryPoint.appendChild(dog)
+      });
+    })
+    .catch(error => {
+      console.log('Get dog failed')
+    })
+    .finally(() => {
+      console.log('done')
+    })
 }
+fetchDog('doberman', 3)
+fetchDog('african', 3)
+
 
 // 👉 TASK 6- Put a button in index.html to 'get dogs' and add a click
 // event listener that executes `getDogs`
