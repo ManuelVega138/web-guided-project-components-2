@@ -21,7 +21,7 @@ function onlyLikeEvenNumbers(number) {
       } else {
         reject(`Bad: ${number} is odd`)
       }
-    }, 1000)
+    }, 5000)
   })
 }
 
@@ -29,7 +29,7 @@ function onlyLikeEvenNumbers(number) {
 // Usage of a function that returns a promise.
 // Very common to use utility functions that return promises:
 // axios.get('URL') // returns a promise
-onlyLikeEvenNumbers(5)
+onlyLikeEvenNumbers(4)
   .then(data => {
     // HAPPY PATH
     // do stuff with data
