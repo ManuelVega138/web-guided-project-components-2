@@ -29,7 +29,18 @@ function onlyLikeEvenNumbers(number) {
 // Usage of a function that returns a promise.
 // Very common to use utility functions that return promises:
 // axios.get('URL') // returns a promise
-
+onlyLikeEvenNumbers(5)
+  .then(data => {
+    // HAPPY PATH
+    // do stuff with data
+  })
+  .catch(error => {
+    // SAD PATH
+    // handle the sad situation somehow
+  })
+  .finally(() => {
+    // RUNS REGARDLESS
+  })
 
 // 👉 TASK 1- Select the "entry point", the element
 // inside of which we'll inject our dog cards 
