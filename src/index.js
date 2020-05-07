@@ -21,7 +21,7 @@ function onlyLikeEvenNumbers(number) {
       } else {
         reject(`Bad: ${number} is odd`)
       }
-    }, 5000)
+    }, 200)
   })
 }
 
