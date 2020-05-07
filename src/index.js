@@ -32,17 +32,17 @@ function onlyLikeEvenNumbers(number) {
 onlyLikeEvenNumbers(4)
   .then(data => {
     // HAPPY PATH
-    // do stuff with data
+    // do stuff with the resolved data
     console.log(data)
   })
   .catch(error => {
     // SAD PATH
-    // handle the sad situation somehow
+    // handle the rejection somehow
     console.log(error)
   })
   .finally(() => {
     // RUNS REGARDLESS (optional)
-    console.log('done, for better or worse')
+    console.log('Done: for better or worse')
   })
 
 console.log('we just executed a function that returns a promise')
