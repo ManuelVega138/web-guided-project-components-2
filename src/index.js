@@ -19,7 +19,7 @@ function onlyLikeEvenNumbers(number) {
       if (number % 2 === 0) {
         resolve(`Good: ${number} is even`)
       } else {
-        reject(`Bad: ${number} is odd`)
+        reject(new Error(`Bad: ${number} is odd`))
       }
     }, 2000)
   })
@@ -33,16 +33,16 @@ onlyLikeEvenNumbers(5)
   .then(data => {
     // HAPPY PATH
     // do stuff with the resolved data
-    console.log(data)
+    // console.log(data)
   })
   .catch(error => {
     // SAD PATH
     // handle the rejection somehow
-    console.log(error)
+    // console.log(error)
   })
   .finally(() => {
     // RUNS REGARDLESS (optional)
-    console.log('Done: for better or worse')
+    // console.log('Done: for better or worse')
   })
 
 
