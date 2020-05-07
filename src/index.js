@@ -51,7 +51,7 @@ console.log('we just executed a function that returns a promise')
 
 // 👉 TASK 1- Select the "entry point", the element
 // inside of which we'll inject our dog cards 
-const entryPoint = null
+const entryPoint = document.querySelector(".entry")
 
 
 // 👉 TASK 2- Build out a `dogCardMaker` component
@@ -63,7 +63,7 @@ const entryPoint = null
 //   <h3>Breed: {breed}</h3>
 // </div>
 function dogCardMaker(/* what here? */) {
-
+  // implement!
 }
 
 
